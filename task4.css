@@ -1,0 +1,32 @@
+:root {
+    --primary-sky: #E3F2FD;       
+    --accent-lavender: #F3E5F5;  
+    --purple-soft: #b19cd9;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, var(--primary-sky) 0%, var(--accent-lavender) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(177, 156, 217, 0.2);
+    text-align: center;
+    border: 1px solid white;
+}
+
+.message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-top: 20px;
+}

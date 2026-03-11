@@ -1,0 +1,80 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --primary-purple: #b19cd9;
+    --text-dark: #444;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    max-width: 1000px;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-purple);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.task-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(177, 156, 217, 0.3);
+    background: white;
+}
+
+.task-num {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(177, 156, 217, 0.15);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.task-card h3 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    z-index: 1;
+}
+
+.task-card:hover h3 {
+    color: var(--primary-purple);
+}

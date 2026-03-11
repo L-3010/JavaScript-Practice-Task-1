@@ -1,0 +1,111 @@
+:root {
+    --primary-sky: #E3F2FD;       
+    --accent-lavender: #f8d4ff;  
+    --purple-soft: #cdbbef;
+    --purple-accent: #b38ef2;
+    --text-main: #4A4A4A;         
+    --white-pearl: #FFFFFF;       
+    --font-soft: 'Poppins', sans-serif;     
+    --transition: all 0.3s ease;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, var(--primary-sky) 0%, var(--accent-lavender) 100%);
+    font-family: var(--font-soft);
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px); 
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(177, 156, 217, 0.2);
+    width: 340px;
+    border: 1px solid var(--white-pearl);
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    font-size: 32px;
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-family: var(--font-soft);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    background-color: var(--white-pearl);
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: var(--primary-sky);
+    box-shadow: 0 8px 15px rgba(142, 148, 242, 0.15);
+}
+
+
+.operator { 
+    background-color: var(--purple-soft); 
+    color: white;
+}
+
+.operator:hover {
+    background-color: var(--blue-accent);
+}
+
+.equal { 
+    background-color: var(--purple-soft); 
+    color: white;
+    grid-row: span 2; 
+}
+.operatorp{
+    background-color: var(--purple-soft);
+    color: white;
+    grid-row: span 2;
+}
+
+.equal:hover { 
+    background-color: var(--purple-accent);
+}
+
+.operatorp:hover{
+    background-color: var(--purple-accent);
+}
+
+.clear { 
+    background-color: #fce1f2; 
+    color: #ff5272;
+}
+
+.clear:hover {
+    background-color: #ffcdee;
+}
+
+.zero { 
+    grid-column: span 2; 
+}
